@@ -26,3 +26,20 @@ jobs:
 
     - name: Test
       run: go test -v ./...
+
+    - name: Docker Login 
+      uses: docker/login-action@v2.1.0
+      env: 
+       DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+      with: 
+        username: ${{ secrets.DOCKERHUB_USER }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+    - name: Build Docker Image
+      uses: docker/build-push-action@v4.0.0
+      with:
+       file: ./Dockerfile
+       push: false
+       tags: |
+        mrckurz/cicd-workshop-test-image:latest
+        mrckurz/cicd-workshop-test-image:${{github.sha}}

@@ -19,4 +19,14 @@ This simple go program is used to demonstrate how easy a CI/CD pipeline can be s
 * docker container run -p 9090:8888 mrckurz/cicd-workshop-test-image:latest
 * docker ps
 * docker stop [containerId]
-* docker image pull mrckurz/cicd-workshop-test-image:[latest|sha>]
+* docker image pull mrckurz/cicd-workshop-test-image:[latest|sha]
+
+### Trivy
+* trivy image [YOUR_IMAGE_NAME]
+* trivy config .
+
+### Git
+* git config --global alias.s status
+* git config --global alias.glog "log --pretty=oneline --graph -5 --decorate --abbrev-commit"
+
+

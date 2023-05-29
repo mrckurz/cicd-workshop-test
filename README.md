@@ -17,4 +17,6 @@ This simple go program is used to demonstrate how easy a CI/CD pipeline can be s
 * docker image build -f Dockerfile -t mrckurz/cicd-workshop-test-image:latest ./ 
 * docker images
 * docker container run -p 9090:8888 mrckurz/cicd-workshop-test-image:latest
-
+* docker ps
+* docker stop <id>
+* docker image pull mrckurz/cicd-workshop-test-image:<latest|sha>

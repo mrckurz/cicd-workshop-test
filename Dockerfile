@@ -1,10 +1,13 @@
-FROM golang:1.11-alpine
+FROM golang:1.19
 
 # Set maintainer label: maintainer=[YOUR-EMAIL]
 MAINTAINER Marc Kurz <marc.kurz@fh-ooe.at>
 
 # Set working directory: `/src`
 WORKDIR /src
+
+# run go mod init
+RUN go mod init mymain
 
 # Copy local file `main.go` to the working directory
 COPY main.go .

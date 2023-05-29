@@ -7,3 +7,14 @@ This simple go program is used to demonstrate how easy a CI/CD pipeline can be s
 4. create the docker image and push it to Dockerhub
 5. add a static SourceCode quality scan (SonarCloud) for monitoring the code quality
 6. add a Vulnerability Scanner (Trivy)
+
+## Some hints for basic functionalty:
+### Go
+* go run main.go
+* go test -v
+
+### Docker
+* docker image build -f Dockerfile -t mrckurz/cicd-workshop-test-image:latest ./ 
+* docker images
+* docker container run -p 9090:8888 mrckurz/cicd-workshop-test-image:latest
+

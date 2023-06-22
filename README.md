@@ -29,5 +29,3 @@ This simple go program is used to demonstrate how easy a CI/CD pipeline can be s
 ### Git
 * git config --global alias.s status
 * git config --global alias.glog "log --pretty=oneline --graph -5 --decorate --abbrev-commit"
-
-

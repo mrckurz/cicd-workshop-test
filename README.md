@@ -8,7 +8,7 @@ This simple go program is used to demonstrate how easy a CI/CD pipeline can be s
 5. add a static SourceCode quality scan (SonarCloud) for monitoring the code quality
 6. add a Vulnerability Scanner (Trivy)
 
-## Some hints for basic functionalty:
+## Some hints for basic functionality:
 ### Go
 * go run main.go
 * go test -v
